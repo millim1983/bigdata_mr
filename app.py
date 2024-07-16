@@ -12,6 +12,7 @@ def main():
     st.warning('경고 문구 보여주고 싶을때 사용')
     st.info('정보를 보여주고 싶을때 사용')
     st.error('문제가 발생했을때 사용')
+    st.error('무엇이 문제인지 모르겠다')
 
     st.help(sum)
     st.help(len)
