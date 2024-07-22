@@ -33,7 +33,7 @@ def main():
 
     #PIL 패키지에 이미지 모듈을 통해 이미지 열기 
     # Image.open('이미지 경로')
-    img = 'https://github.com/user-attachments/assets/8ae84f11-c6e9-482e-b55a-3e01d4a283e6'
+    img = 'https://github.com/millim1983/bigdata_mr/moldiv_familychair.png'
     logo_img = Image.open(img)
 
     col1,col2 = st.columns([2,3])
