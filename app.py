@@ -13,6 +13,8 @@ def main():
     st.info('오늘은 늦는다')
     st.error('비가많이온다')
     st.error('재미따 껄껄')
+    st.title('연결된건가')
+    
 
     
 
