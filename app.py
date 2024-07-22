@@ -4,7 +4,7 @@ import streamlit as st
 # 웹 대시보드 개발 라이브러르 스트림릿은 main 함수가 있어야 한다 
 
 def main():
-    st.title('뚱범이사랑해')
+    
     st.title('파이썬전문가가 되자')
     st.header('데이타 전문가가 되자')
     st.subheader('어여 나으세요')
