@@ -42,21 +42,23 @@ def main():
     url = "https://github.com/user-attachments/assets/57728188-0a49-4204-84dd-0c393d533a7e"
 
 
-    try:
-        # 이미지 URL로부터 이미지 데이터 가져오기
-        response = requests.get(url)
-        response.raise_for_status()  # HTTP 오류가 발생하면 예외 발생
+    # try:
+    #     # 이미지 URL로부터 이미지 데이터 가져오기
+    #     response = requests.get(url)
+    #     response.raise_for_status()  # HTTP 오류가 발생하면 예외 발생
 
-        # 이미지 데이터를 PIL 이미지로 변환
-        image = Image.open(BytesIO(response.content))
+    #     # 이미지 데이터를 PIL 이미지로 변환
+    #     image = Image.open(BytesIO(response.content))
 
-        # Streamlit 앱에서 이미지 표시
-        st.image(image, caption="GitHub에서 불러온 이미지")
+    #     # Streamlit 앱에서 이미지 표시
+    #     st.image(image, caption="GitHub에서 불러온 이미지")
 
-    except requests.exceptions.RequestException as e:
-        # HTTP 요청 중 오류가 발생한 경우
-        st.error(f"이미지를 불러오는 중 오류가 발생했습니다: {e}")
-    #image = image.resize((128, 128), resampling=Image.LANCZOS)
+    # except requests.exceptions.RequestException as e:
+    #     # HTTP 요청 중 오류가 발생한 경우
+    #     st.error(f"이미지를 불러오는 중 오류가 발생했습니다: {e}")
+    # #image = image.resize((128, 128), resampling=Image.LANCZOS)
+    image = Image.open(url)
+    st.image(image)
 
     # # 컬럼2에 불러온 사진 표시하기
     # col2.image(logo_img)
