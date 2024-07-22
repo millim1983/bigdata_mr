@@ -39,8 +39,8 @@ def main():
     st.title("GitHub 이미지 표시 예제")
 
     # GitHub 리포지토리의 이미지 URL
-    url = "https://github.com/user-attachments/assets/57728188-0a49-4204-84dd-0c393d533a7e"
-
+    #url = "https://github.com/user-attachments/assets/57728188-0a49-4204-84dd-0c393d533a7e"
+    url='https://github.com/millim1983/bigdata_mr/blob/60bde20c3039f1f5c1d4b34ecfa3bffb5a3a9458/images/moldiv_familychair.png?raw=true'
 
     # try:
     #     # 이미지 URL로부터 이미지 데이터 가져오기
