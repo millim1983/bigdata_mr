@@ -48,7 +48,7 @@ def main():
 
 
     # 컬럼2에 불러온 사진 표시하기
-    col2.image('https://github.com/millim1983/bigdata_mr/moldiv_familychair.png')
+    #col2.image('https://github.com/millim1983/bigdata_mr/moldiv_familychair.png')
 
     
 
