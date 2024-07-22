@@ -5,7 +5,7 @@ import streamlit as st
 
 def main():
     
-    st.title('파이썬전문가가 되자')
+    st.title('vscode -> github ->streamlit')
     st.header('데이타 전문가가 되자')
     st.subheader('어여 나으세요')
     st.success('겸둥이 동영이를 사랑해')
