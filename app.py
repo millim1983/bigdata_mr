@@ -1,6 +1,8 @@
 # 스트림릿 라이브러리 사용하기 위한 임포트
 import streamlit as st
 from PIL import Image
+import requests
+from io import BytesIO
 
 # 웹 대시보드 개발 라이브러르 스트림릿은 main 함수가 있어야 한다 
 
@@ -34,15 +36,29 @@ def main():
     #PIL 패키지에 이미지 모듈을 통해 이미지 열기 
     # Image.open('이미지 경로')
     #logo_img = Image.open('https://github.com/millim1983/bigdata_mr/moldiv_familychair.png')
-    url = 'https://github.com/millim1983/bigdata_mr/images/moldiv_familychair.png'
-    response = requests.get(url)
-    image_data = response.content
+    st.title("GitHub 이미지 표시 예제")
 
-    image = Image.open(io.BytesIO(image_data))
+    # GitHub 리포지토리의 이미지 URL
+    url = "https://github.com/millim1983/bigdata_mr/moldiv_familychair.png"
+
+    try:
+        # 이미지 URL로부터 이미지 데이터 가져오기
+        response = requests.get(url)
+        response.raise_for_status()  # HTTP 오류가 발생하면 예외 발생
+
+        # 이미지 데이터를 PIL 이미지로 변환
+        image = Image.open(BytesIO(response.content))
+
+        # Streamlit 앱에서 이미지 표시
+        st.image(image, caption="GitHub에서 불러온 이미지")
+
+    except requests.exceptions.RequestException as e:
+        # HTTP 요청 중 오류가 발생한 경우
+        st.error(f"이미지를 불러오는 중 오류가 발생했습니다: {e}")
     #image = image.resize((128, 128), resampling=Image.LANCZOS)
 
-    # 컬럼2에 불러온 사진 표시하기
-    col2.image(logo_img)
+    # # 컬럼2에 불러온 사진 표시하기
+    # col2.image(logo_img)
 
     
 
