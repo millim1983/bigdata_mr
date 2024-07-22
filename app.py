@@ -33,11 +33,11 @@ def main():
 
     #PIL 패키지에 이미지 모듈을 통해 이미지 열기 
     # Image.open('이미지 경로')
-
+    logo_img = Image.open('G:\내 드라이브\github\bigdata_mr\images\moldiv_familychair.png')
     #logo_img = Image.open('https://github.com/millim1983/bigdata_mr/moldiv_familychair.png')
 
     # 컬럼2에 불러온 사진 표시하기
-    col2.image('http://millim1983/github.io/bigdata_mr/images/moldiv_familychair.png', caption='제발돼라')
+    col2.image(logo_img)
 
     
 
