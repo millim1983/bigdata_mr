@@ -10,22 +10,22 @@ def main():
 
     with col1 :
     # column 1 에 담을 내용
-        st.title('here is column1')
+        st.title('분할섹션 1')
     with col2 :
     # column 2 에 담을 내용
-        st.title('here is column2')
-        st.checkbox('this is checkbox1 in col2 ')
+        st.title('분할섹션 2')
+        st.checkbox('분할섹션2의 체크박스1')
 
 
     # with 구문 말고 다르게 사용 가능 
-    col1.subheader(' i am column1  subheader !! ')
-    col2.checkbox('this is checkbox2 in col2 ') 
+    col1.subheader('작은제목! ')
+    col2.checkbox('분할섹션2의 체크박스2') 
     #=>위에 with col2: 안의 내용과 같은 기능을합니다
 
 
     #st.sidebar는 
-    st.sidebar.title('this is sidebar')
-    st.sidebar.checkbox('체크박스에 표시될 문구')
+    st.sidebar.title('사이드바 제목')
+    st.sidebar.checkbox('사이드바의 체크박스 1')
     # 사이드바에 체크박스, 버튼등 추가할 수 있습니다! 
     # 추가적으로 Expander, Container ,Empty가 있습니다
 
@@ -36,19 +36,8 @@ def main():
 
     #logo_img = Image.open('https://github.com/millim1983/bigdata_mr/moldiv_familychair.png')
 
-    col1,col2 = st.columns([2,3])
-
-    with col1 :
-    # column 1 에 담을 내용
-        st.title('here is column1')
-    with col2 :
-    # column 2 에 담을 내용
-        st.title('here is column2')
-        st.checkbox('this is checkbox1 in col2 ')
-
-
     # 컬럼2에 불러온 사진 표시하기
-    #col2.image('https://github.com/millim1983/bigdata_mr/moldiv_familychair.png')
+    col2.image('https://github.com/millim1983/bigdata_mr/moldiv_familychair.png')
 
     
 
