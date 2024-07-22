@@ -33,8 +33,13 @@ def main():
 
     #PIL 패키지에 이미지 모듈을 통해 이미지 열기 
     # Image.open('이미지 경로')
-    logo_img = Image.open('https://www.nia.or.kr/img/nia_kor/gov_2022.png')
     #logo_img = Image.open('https://github.com/millim1983/bigdata_mr/moldiv_familychair.png')
+    url = 'https://github.com/millim1983/bigdata_mr/images/moldiv_familychair.png'
+    response = requests.get(url)
+    image_data = response.content
+
+    image = Image.open(io.BytesIO(image_data))
+    #image = image.resize((128, 128), resampling=Image.LANCZOS)
 
     # 컬럼2에 불러온 사진 표시하기
     col2.image(logo_img)
