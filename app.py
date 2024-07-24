@@ -39,26 +39,24 @@ def main():
     st.title("GitHub 이미지 표시 예제")
 
     # GitHub 리포지토리의 이미지 URL
-    #url = "https://github.com/user-attachments/assets/57728188-0a49-4204-84dd-0c393d533a7e"
-    url='https://github.com/millim1983/bigdata_mr/blob/60bde20c3039f1f5c1d4b34ecfa3bffb5a3a9458/images/moldiv_familychair.png?raw=true'
+    url = "https://github.com/user-attachments/assets/57728188-0a49-4204-84dd-0c393d533a7e"
+    
 
-    # try:
-    #     # 이미지 URL로부터 이미지 데이터 가져오기
-    #     response = requests.get(url)
-    #     response.raise_for_status()  # HTTP 오류가 발생하면 예외 발생
+    try:
+        # 이미지 URL로부터 이미지 데이터 가져오기
+        response = requests.get(url)
+        response.raise_for_status()  # HTTP 오류가 발생하면 예외 발생
 
-    #     # 이미지 데이터를 PIL 이미지로 변환
-    #     image = Image.open(BytesIO(response.content))
+        # 이미지 데이터를 PIL 이미지로 변환
+        image = Image.open(BytesIO(response.content))
 
-    #     # Streamlit 앱에서 이미지 표시
-    #     st.image(image, caption="GitHub에서 불러온 이미지")
+        # Streamlit 앱에서 이미지 표시
+        st.image(image, caption="GitHub에서 불러온 이미지")
 
-    # except requests.exceptions.RequestException as e:
-    #     # HTTP 요청 중 오류가 발생한 경우
-    #     st.error(f"이미지를 불러오는 중 오류가 발생했습니다: {e}")
-    # #image = image.resize((128, 128), resampling=Image.LANCZOS)
-    image = Image.open(url)
-    st.image(image)
+    except requests.exceptions.RequestException as e:
+        # HTTP 요청 중 오류가 발생한 경우
+        st.error(f"이미지를 불러오는 중 오류가 발생했습니다: {e}")
+    #image = image.resize((128, 128), resampling=Image.LANCZOS)
 
     # # 컬럼2에 불러온 사진 표시하기
     # col2.image(logo_img)
