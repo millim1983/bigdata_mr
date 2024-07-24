@@ -3,6 +3,9 @@ import streamlit as st
 from PIL import Image
 import requests
 from io import BytesIO
+import pandas as pd
+import numpy as np
+
 
 # 웹 대시보드 개발 라이브러르 스트림릿은 main 함수가 있어야 한다 
 
@@ -39,8 +42,8 @@ def main():
     st.title("GitHub 이미지 표시 예제")
 
     # GitHub 리포지토리의 이미지 URL
-    url = "https://github.com/user-attachments/assets/57728188-0a49-4204-84dd-0c393d533a7e"
-    
+    #url = "https://github.com/user-attachments/assets/57728188-0a49-4204-84dd-0c393d533a7e"
+    url = 'https://github.com/millim1983/bigdata_mr/moldiv_familychair.png'
 
     try:
         # 이미지 URL로부터 이미지 데이터 가져오기
