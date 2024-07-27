@@ -15,22 +15,25 @@ def main():
 
     with col1 :
     # column 1 에 담을 내용
-        st.title('분할섹션 1')
+        st.title('내!한!제!분!')
     with col2 :
     # column 2 에 담을 내용
-        st.title('분할섹션 2')
-        st.checkbox('분할섹션2의 체크박스1')
+        st.title('빅데이터 분석 프로젝트')
+        st.checkbox('실습1-황삭가공데이터 분석')
 
 
     # with 구문 말고 다르게 사용 가능 
-    col1.subheader('작은제목! ')
-    col2.checkbox('분할섹션2의 체크박스2') 
+    col1.subheader('실전에 강한 데이터분석 전문가로 가는길~')
+    col2.checkbox('실습2-압연공정 데이터 분석') 
+    
     #=>위에 with col2: 안의 내용과 같은 기능을합니다
 
 
     #st.sidebar는 
-    st.sidebar.title('사이드바 제목')
-    st.sidebar.checkbox('사이드바의 체크박스 1')
+    st.sidebar.title('빅데이터분석 프로젝트')
+    st.sidebar.checkbox('1차_모임')
+    st.sidebar.checkbox('2차_모임')
+    st.sidebar.checkbox('3차_모임')
     # 사이드바에 체크박스, 버튼등 추가할 수 있습니다! 
     # 추가적으로 Expander, Container ,Empty가 있습니다
 
@@ -42,9 +45,10 @@ def main():
     st.title("GitHub 이미지 표시 예제")
 
     # GitHub 리포지토리의 이미지 URL
-    #url = "https://github.com/user-attachments/assets/57728188-0a49-4204-84dd-0c393d533a7e"
     #url = 'https://github.com/millim1983/bigdata_mr/moldiv_familychair.png'
     url = 'https://github.com/millim1983/bigdata_mr/blob/main/images/moldiv_familychair.png?raw=true'
+    # 깃허브 이미지 업로드 후 > 우클릭 > 링크 복사 
+    
     try:
         # 이미지 URL로부터 이미지 데이터 가져오기
         response = requests.get(url)
